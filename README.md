@@ -1,7 +1,7 @@
-SIMPLE BANKING SYSTEM########
-CLASSWORK1.PY 
-OVEVIEW 
-This project is created to simulates a basic banking transaction deposit and withdrawl from a users balance.
+SIMPLE BANKING SYSTEM######## 
+CLASSWORK1.PY  
+OVEVIEW  
+This project is created to simulates a basic banking transaction deposit and withdrawl from a users balance. 
 
 Feautures
 . Add to balance 
