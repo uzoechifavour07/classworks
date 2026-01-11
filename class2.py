@@ -37,35 +37,36 @@ else:
 ##### Excercise 6
 
 balance = 10000
-card_active = True
+card_active = False
 pin = 1234
 user_pin = int(input("please enter your pin ?"))
 
 if pin == user_pin:
- amount = int(input("how much do you want to withdraw ?"))
- total_cbalace1 = balance - amount
+    amount = int(input("how much do you want to withdraw ?"))
+    total_cbalace1 = balance - amount
 
- if total_cbalace1 >= 1100 :
-      print ('you can withdraw')
- elif total_cbalace1 <= 0:
-      print("sorry please top up")
- elif balance <= 1000 or balance <= 0:
-    print ("sorry please top up")
-
-
-elif pin != user_pin :
-  print("let's try again")
-  try_1_pin = int(input("what is your pin again ?"))
-  if try_1_pin == pin :
-     amount = int(input("how much do you want to withdraw ?"))
-     total_cbalace1 = balance - amount
-     if total_cbalace1 >= 1100 :
-      print ('you can withdraw')
-     elif total_cbalace1 <= 0:
-      print("sorry please top up")
-     elif balance <= 1000 or balance <= 0 :
-       print ("sorry please top up")
-  else :
+    if total_cbalace1 >= 1100:
+        print ('you can withdraw')
+    elif total_cbalace1 <= 0:
+        print("sorry please top up")
+    elif balance <= 1000 or balance <= 0:
+        print ("sorry please top up")
+elif pin != user_pin and card_active == True:
+    print("let's try again")
+    try_1_pin = int(input("what is your pin again ?"))
+    if try_1_pin == pin:
+        amount = int(input("how much do you want to withdraw ?"))
+        total_cbalace1 = balance - amount
+        if total_cbalace1 >= 1100:
+            print ('you can withdraw')
+        elif total_cbalace1 <= 0:
+            print("sorry please top up")
+        elif balance <= 1000 or balance <= 0:
+            print ("sorry please top up") 
+else:
     print("account blocked")
+
+
+
 
 
